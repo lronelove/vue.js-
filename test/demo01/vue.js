@@ -258,6 +258,7 @@
         }
         return res
     }
+    console.log(toObject({0: 1, 1: 2, length: 2}), 'toObject')
 
     /* eslint-disable no-unused-vars */
 
