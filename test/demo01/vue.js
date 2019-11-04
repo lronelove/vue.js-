@@ -541,6 +541,7 @@
     var isPhantomJS = UA && /phantomjs/.test(UA);
     var isFF = UA && UA.match(/firefox\/(\d+)/);
 
+
     // Firefox has a "watch" function on Object.prototype...
     var nativeWatch = ({}).watch;
 
@@ -665,7 +666,7 @@
                 (file && includeFile !== false ? (" at " + file) : '')
             )
         };
-
+6   
         var repeat = function (str, n) {
             var res = '';
             while (n) {
@@ -1601,7 +1602,7 @@
         return res
     }
 
-    /*  */
+    /* now */
 
 
 
