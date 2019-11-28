@@ -1,0 +1,1 @@
+#在props类型里面不仅限于Array,Number,String啥的，只要是满足继承关系的也可以

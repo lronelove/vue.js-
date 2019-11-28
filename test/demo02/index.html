@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <h1>{{hello}}</h1>
+    <test-com></test-com>
+  </div>
+  <script type="text/javascript" src="vue.js"></script>
+  <script>
+    class Node {
+      constructor(id, name) {
+        this.id = id
+        this.name = name
+      }
+    }
+
+    Vue.component('test-com', {
+      template: '<span>hello test{{time.name}}</span>',
+      props: {
+        time: {
+          required: false,
+          type: Node,
+          default: () => new Node(1, 2)
+        }
+      }
+    })
+
+
+    new Vue({
+      el: '#app',
+      data: {
+        hello: 'hello world'
+      }
+    })
+  </script>
+</body>
+</html>
